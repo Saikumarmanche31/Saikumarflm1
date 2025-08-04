@@ -1,11 +1,26 @@
-public class AddNumbers {
+class Car {
+    // Fields (attributes)
+    String type;
+    String model;
+    String color;
+
+    // Constructor
+    Car(String type, String model, String color) {
+        this.type = type;
+        this.model = model;
+        this.color = color;
+    }
+
+    // Method
+    void displayCarDetails() {
+        System.out.println("Type: " + type + ", Model: " + model + ", Color: " + color);
+    }
+}
+
+public class MyCar {
     public static void main(String[] args) {
-        int num1 = 5; // Declare and initialize integer variable num1
-        int num2 = 10; // Declare and initialize integer variable num2
-        int sum; // Declare integer variable sum
-
-        sum = num1 + num2; // Calculate the sum
-
-        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + sum); 
+        // Create an object of the Car class
+        Car mySedan = new Car("Sedan", "Civic", "Red"); 
+        mySedan.displayCarDetails(); // Call a method on the object
     }
 }
