@@ -1,11 +1,15 @@
-num1 = 10
-num2 = 5
-sum_result = num1 + num2
-difference_result = num1 - num2
-product_result = num1 * num2
-quotient_result = num1 / num2
 
-print(f"Sum: {sum_result}")
-print(f"Difference: {difference_result}")
-print(f"Product: {product_result}")
-print(f"Quotient: {quotient_result}")
+import math
+
+def is_perfect_sq(x):
+    s = int(math.sqrt(x))
+    return s * s == x
+
+def is_fibonacci(n):
+    return is_perfect_sq(5 * n * n + 4) or is_perfect_sq(5 * n * n - 4)
+
+for i in range(1, 7):
+    if is_fibonacci(i):
+        print(f"{i} is a Fibonacci Number")
+    else:
+        print(f"{i} is not a Fibonacci Number")
